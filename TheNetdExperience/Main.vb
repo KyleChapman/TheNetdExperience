@@ -15,7 +15,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, saves the current Whiteboard image
     ''' </summary>
-    Private Sub SaveFile(sender As Object, e As EventArgs) Handles mnuFile2Save.Click
+    Private Sub SaveFile(sender As Object, e As EventArgs) Handles mnuFileSave.Click, btnToolStripSave.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then
@@ -29,7 +29,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, saves the current Whiteboard image
     ''' </summary>
-    Private Sub mnuFile2SaveAs_Click(sender As Object, e As EventArgs) Handles mnuFile2SaveAs.Click
+    Private Sub mnuFile2SaveAs_Click(sender As Object, e As EventArgs) Handles mnuFileSaveAs.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then
@@ -43,7 +43,7 @@ Public Class frmMain
     ''' <summary>
     ''' Closes the active MdiChild window or requests to exit the application
     ''' </summary>
-    Private Sub mnuFileClose_Click(sender As Object, e As EventArgs) Handles mnuFileClose.Click
+    Private Sub mnuFileClose_Click(sender As Object, e As EventArgs) Handles mnuFileClose.Click, btnToolStripClose.Click
 
         ' If there are child form open, close the active child forms
         If MdiChildren.Count > 0 Then
@@ -65,7 +65,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, copies the current Whiteboard image to the clipboard
     ''' </summary>
-    Private Sub mnuEditCopy_Click(sender As Object, e As EventArgs) Handles mnuEditCopy.Click
+    Private Sub mnuEditCopy_Click(sender As Object, e As EventArgs) Handles mnuEditCopy.Click, btnToolStripCopy.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then
@@ -79,7 +79,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, attempts to paste into it from the clipboard
     ''' </summary>
-    Private Sub mnuEditPaste_Click(sender As Object, e As EventArgs) Handles mnuEditPaste.Click
+    Private Sub mnuEditPaste_Click(sender As Object, e As EventArgs) Handles mnuEditPaste.Click, btnToolStripPaste.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then
@@ -178,6 +178,17 @@ Public Class frmMain
     Private Sub mnuWindowTileVertically_Click(sender As Object, e As EventArgs) Handles mnuWindowTileVertically.Click
 
         Me.LayoutMdi(MdiLayout.TileVertical)
+
+    End Sub
+
+    ''' <summary>
+    ''' Create and display a new awesomness form instance
+    ''' </summary>
+    Private Sub ShowNewAwesomness(sender As Object, e As EventArgs) Handles btnToolStripAwesomness.Click, mnuWindowNewAwesomness.Click
+
+        Dim myAwesomeness As New frmAwesomeness ' Create a new instance of the Awesomeness form
+        myAwesomeness.MdiParent = Me            ' Set the new instance to be an MdiChild
+        myAwesomeness.Show()                    ' Display the instance of the Awesomeness form
 
     End Sub
 
