@@ -97,7 +97,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, increase the brush size
     ''' </summary>
-    Private Sub IncreaseSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseSizeToolStripMenuItem.Click
+    Private Sub IncreaseSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuBrushIncreaseSize.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then
@@ -111,7 +111,7 @@ Public Class frmMain
     ''' <summary>
     ''' If a Whiteboard form is active, decrease the brush size
     ''' </summary>
-    Private Sub DecreaseSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseSizeToolStripMenuItem.Click
+    Private Sub DecreaseSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuBrushDecreaseSize.Click
 
         ' This operation can only be performed on Whiteboard forms
         If TypeOf (ActiveMdiChild) Is frmWhiteboard Then

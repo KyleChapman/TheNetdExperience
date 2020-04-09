@@ -24,7 +24,7 @@ Partial Class frmCarInfo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCarInfo))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbMakePrompt = New System.Windows.Forms.Label()
         Me.cboMake = New System.Windows.Forms.ComboBox()
         Me.lblModelPrompt = New System.Windows.Forms.Label()
         Me.tbModel = New System.Windows.Forms.TextBox()
@@ -48,14 +48,14 @@ Partial Class frmCarInfo
         CType(Me.nudYear, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lbMakePrompt
         '
-        Me.Label1.Location = New System.Drawing.Point(224, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "&Make:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lbMakePrompt.Location = New System.Drawing.Point(224, 6)
+        Me.lbMakePrompt.Name = "lbMakePrompt"
+        Me.lbMakePrompt.Size = New System.Drawing.Size(50, 25)
+        Me.lbMakePrompt.TabIndex = 0
+        Me.lbMakePrompt.Text = "&Make:"
+        Me.lbMakePrompt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'cboMake
         '
@@ -238,7 +238,7 @@ Partial Class frmCarInfo
         Me.Controls.Add(Me.tbModel)
         Me.Controls.Add(Me.lblModelPrompt)
         Me.Controls.Add(Me.cboMake)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbMakePrompt)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
@@ -254,7 +254,7 @@ Partial Class frmCarInfo
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbMakePrompt As Label
     Friend WithEvents cboMake As ComboBox
     Friend WithEvents lblModelPrompt As Label
     Friend WithEvents tbModel As TextBox
