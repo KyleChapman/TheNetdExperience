@@ -22,6 +22,7 @@ Partial Class frmWhiteboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWhiteboard))
         Me.sfdSaveAs = New System.Windows.Forms.SaveFileDialog()
         Me.pbxCanvas = New System.Windows.Forms.PictureBox()
         CType(Me.pbxCanvas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,6 +44,7 @@ Partial Class frmWhiteboard
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(384, 261)
         Me.Controls.Add(Me.pbxCanvas)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmWhiteboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Kyle's Whiteboard"

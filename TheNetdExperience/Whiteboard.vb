@@ -226,60 +226,14 @@ Public Class frmWhiteboard
 
     End Sub
 
-#Region "mnuBrushColor.Event Handlers"
-
-    ' I'm not commenting all of these.
-    ' This could be much neater, probably using an enum or something, but meh.
-
-    Private Sub mnuBrushColourBlack_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Black
+    ''' <summary>
+    ''' Set the color for the brush
+    ''' </summary>
+    ''' <param name="colorValue">The color to set for the brush</param>
+    Friend Sub SetColor(colorValue As Color)
+        brushColour = colorValue
     End Sub
 
-    Private Sub mnuBrushColourBlue_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Blue
-    End Sub
-
-    Private Sub mnuBrushColourBrown_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Brown
-    End Sub
-
-    Private Sub mnuBrushColourGainsboro_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Gainsboro
-    End Sub
-
-    Private Sub mnuBrushColourGray_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Gray
-    End Sub
-
-    Private Sub mnuBrushColourMintCream_Click(sender As Object, e As EventArgs)
-        brushColour = Color.MintCream
-    End Sub
-
-    Private Sub mnuBrushColourOrange_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Orange
-    End Sub
-
-    Private Sub mnuBrushColourPurple_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Purple
-    End Sub
-
-    Private Sub mnuBrushColourRed_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Red
-    End Sub
-
-    Private Sub mnuBrushColourSalmon_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Salmon
-    End Sub
-
-    Private Sub mnuBrushColourWhite_Click(sender As Object, e As EventArgs)
-        brushColour = Color.White
-    End Sub
-
-    Private Sub mnuBrushColourYellow_Click(sender As Object, e As EventArgs)
-        brushColour = Color.Yellow
-    End Sub
-
-#End Region
 #End Region
 
 #Region "Methods"

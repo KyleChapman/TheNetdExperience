@@ -22,10 +22,12 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.mnuTopMenu = New System.Windows.Forms.MenuStrip()
         Me.mnuFile2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile2Save = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile2SaveAs = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEditCopy = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEditPaste = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,9 +54,11 @@ Partial Class frmMain
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuWindowNewWhiteboard = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuWindowNewTicTacToe = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuWindowNewCarList = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsTools = New System.Windows.Forms.ToolStrip()
         Me.btnToolStripNewWhiteboard = New System.Windows.Forms.ToolStripButton()
         Me.btnToolStripNewTicTacToe = New System.Windows.Forms.ToolStripButton()
+        Me.btnToolStripNewCarList = New System.Windows.Forms.ToolStripButton()
         Me.mnuFileNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileSaveAs = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,7 +67,6 @@ Partial Class frmMain
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuTopMenu.SuspendLayout()
         Me.tsTools.SuspendLayout()
         Me.SuspendLayout()
@@ -87,14 +90,20 @@ Partial Class frmMain
         '
         Me.mnuFile2Save.Name = "mnuFile2Save"
         Me.mnuFile2Save.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.mnuFile2Save.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFile2Save.Size = New System.Drawing.Size(138, 22)
         Me.mnuFile2Save.Text = "&Save"
         '
         'mnuFile2SaveAs
         '
         Me.mnuFile2SaveAs.Name = "mnuFile2SaveAs"
-        Me.mnuFile2SaveAs.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFile2SaveAs.Size = New System.Drawing.Size(138, 22)
         Me.mnuFile2SaveAs.Text = "Save &As..."
+        '
+        'mnuFileClose
+        '
+        Me.mnuFileClose.Name = "mnuFileClose"
+        Me.mnuFileClose.Size = New System.Drawing.Size(138, 22)
+        Me.mnuFileClose.Text = "&Close"
         '
         'mnuEdit
         '
@@ -106,13 +115,13 @@ Partial Class frmMain
         'mnuEditCopy
         '
         Me.mnuEditCopy.Name = "mnuEditCopy"
-        Me.mnuEditCopy.Size = New System.Drawing.Size(152, 22)
+        Me.mnuEditCopy.Size = New System.Drawing.Size(102, 22)
         Me.mnuEditCopy.Text = "&Copy"
         '
         'mnuEditPaste
         '
         Me.mnuEditPaste.Name = "mnuEditPaste"
-        Me.mnuEditPaste.Size = New System.Drawing.Size(152, 22)
+        Me.mnuEditPaste.Size = New System.Drawing.Size(102, 22)
         Me.mnuEditPaste.Text = "&Paste"
         '
         'BrushToolStripMenuItem
@@ -145,79 +154,79 @@ Partial Class frmMain
         '
         Me.mnuBrushColourBlack.Name = "mnuBrushColourBlack"
         Me.mnuBrushColourBlack.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.mnuBrushColourBlack.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBlack.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBlack.Text = "Black"
         '
         'mnuBrushColourBlue
         '
         Me.mnuBrushColourBlue.Name = "mnuBrushColourBlue"
-        Me.mnuBrushColourBlue.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBlue.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBlue.Text = "Blue"
         '
         'mnuBrushColourBrown
         '
         Me.mnuBrushColourBrown.Name = "mnuBrushColourBrown"
-        Me.mnuBrushColourBrown.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBrown.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBrown.Text = "Brown"
         '
         'mnuBrushColourGainsboro
         '
         Me.mnuBrushColourGainsboro.Name = "mnuBrushColourGainsboro"
-        Me.mnuBrushColourGainsboro.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourGainsboro.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourGainsboro.Text = "Gainsboro"
         '
         'mnuBrushColourGray
         '
         Me.mnuBrushColourGray.Name = "mnuBrushColourGray"
-        Me.mnuBrushColourGray.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourGray.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourGray.Text = "Gray"
         '
         'mnuBrushColourMintCream
         '
         Me.mnuBrushColourMintCream.Name = "mnuBrushColourMintCream"
-        Me.mnuBrushColourMintCream.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourMintCream.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourMintCream.Text = "MintCream"
         '
         'mnuBrushColourOrange
         '
         Me.mnuBrushColourOrange.Name = "mnuBrushColourOrange"
-        Me.mnuBrushColourOrange.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourOrange.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourOrange.Text = "Orange"
         '
         'mnuBrushColourPurple
         '
         Me.mnuBrushColourPurple.Name = "mnuBrushColourPurple"
-        Me.mnuBrushColourPurple.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourPurple.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourPurple.Text = "Purple"
         '
         'mnuBrushColourRed
         '
         Me.mnuBrushColourRed.Name = "mnuBrushColourRed"
-        Me.mnuBrushColourRed.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourRed.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourRed.Text = "Red"
         '
         'mnuBrushColourSalmon
         '
         Me.mnuBrushColourSalmon.Name = "mnuBrushColourSalmon"
-        Me.mnuBrushColourSalmon.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourSalmon.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourSalmon.Text = "Salmon"
         '
         'mnuBrushColourWhite
         '
         Me.mnuBrushColourWhite.Name = "mnuBrushColourWhite"
         Me.mnuBrushColourWhite.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
-        Me.mnuBrushColourWhite.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourWhite.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourWhite.Text = "White"
         '
         'mnuBrushColourYellow
         '
         Me.mnuBrushColourYellow.Name = "mnuBrushColourYellow"
-        Me.mnuBrushColourYellow.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourYellow.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourYellow.Text = "Yellow"
         '
         'mnuWindow
         '
-        Me.mnuWindow.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuWindowCascade, Me.mnuWindowTileHorizontally, Me.mnuWindowTileVertically, Me.ToolStripSeparator1, Me.mnuWindowNewWhiteboard, Me.mnuWindowNewTicTacToe})
+        Me.mnuWindow.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuWindowCascade, Me.mnuWindowTileHorizontally, Me.mnuWindowTileVertically, Me.ToolStripSeparator1, Me.mnuWindowNewWhiteboard, Me.mnuWindowNewTicTacToe, Me.mnuWindowNewCarList})
         Me.mnuWindow.Name = "mnuWindow"
         Me.mnuWindow.Size = New System.Drawing.Size(63, 20)
         Me.mnuWindow.Text = "&Window"
@@ -247,21 +256,28 @@ Partial Class frmMain
         '
         'mnuWindowNewWhiteboard
         '
-        Me.mnuWindowNewWhiteboard.Image = Global.TheNetdExperience.My.Resources.Resources.Whiteboard
+        Me.mnuWindowNewWhiteboard.Image = CType(resources.GetObject("mnuWindowNewWhiteboard.Image"), System.Drawing.Image)
         Me.mnuWindowNewWhiteboard.Name = "mnuWindowNewWhiteboard"
         Me.mnuWindowNewWhiteboard.Size = New System.Drawing.Size(210, 22)
         Me.mnuWindowNewWhiteboard.Text = "New &Whiteboard Window"
         '
         'mnuWindowNewTicTacToe
         '
-        Me.mnuWindowNewTicTacToe.Image = Global.TheNetdExperience.My.Resources.Resources.TacTacToe
+        Me.mnuWindowNewTicTacToe.Image = CType(resources.GetObject("mnuWindowNewTicTacToe.Image"), System.Drawing.Image)
         Me.mnuWindowNewTicTacToe.Name = "mnuWindowNewTicTacToe"
         Me.mnuWindowNewTicTacToe.Size = New System.Drawing.Size(210, 22)
         Me.mnuWindowNewTicTacToe.Text = "New &TicTacToe Window"
         '
+        'mnuWindowNewCarList
+        '
+        Me.mnuWindowNewCarList.Image = CType(resources.GetObject("mnuWindowNewCarList.Image"), System.Drawing.Image)
+        Me.mnuWindowNewCarList.Name = "mnuWindowNewCarList"
+        Me.mnuWindowNewCarList.Size = New System.Drawing.Size(210, 22)
+        Me.mnuWindowNewCarList.Text = "New Car&List Window"
+        '
         'tsTools
         '
-        Me.tsTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnToolStripNewWhiteboard, Me.btnToolStripNewTicTacToe})
+        Me.tsTools.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnToolStripNewWhiteboard, Me.btnToolStripNewTicTacToe, Me.btnToolStripNewCarList})
         Me.tsTools.Location = New System.Drawing.Point(0, 24)
         Me.tsTools.Name = "tsTools"
         Me.tsTools.Size = New System.Drawing.Size(784, 25)
@@ -270,7 +286,7 @@ Partial Class frmMain
         'btnToolStripNewWhiteboard
         '
         Me.btnToolStripNewWhiteboard.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnToolStripNewWhiteboard.Image = Global.TheNetdExperience.My.Resources.Resources.Whiteboard
+        Me.btnToolStripNewWhiteboard.Image = CType(resources.GetObject("btnToolStripNewWhiteboard.Image"), System.Drawing.Image)
         Me.btnToolStripNewWhiteboard.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnToolStripNewWhiteboard.Name = "btnToolStripNewWhiteboard"
         Me.btnToolStripNewWhiteboard.Size = New System.Drawing.Size(23, 22)
@@ -279,11 +295,20 @@ Partial Class frmMain
         'btnToolStripNewTicTacToe
         '
         Me.btnToolStripNewTicTacToe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnToolStripNewTicTacToe.Image = Global.TheNetdExperience.My.Resources.Resources.TacTacToe
+        Me.btnToolStripNewTicTacToe.Image = CType(resources.GetObject("btnToolStripNewTicTacToe.Image"), System.Drawing.Image)
         Me.btnToolStripNewTicTacToe.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnToolStripNewTicTacToe.Name = "btnToolStripNewTicTacToe"
         Me.btnToolStripNewTicTacToe.Size = New System.Drawing.Size(23, 22)
         Me.btnToolStripNewTicTacToe.Text = "ToolStripButton1"
+        '
+        'btnToolStripNewCarList
+        '
+        Me.btnToolStripNewCarList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnToolStripNewCarList.Image = CType(resources.GetObject("btnToolStripNewCarList.Image"), System.Drawing.Image)
+        Me.btnToolStripNewCarList.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnToolStripNewCarList.Name = "btnToolStripNewCarList"
+        Me.btnToolStripNewCarList.Size = New System.Drawing.Size(23, 22)
+        Me.btnToolStripNewCarList.Text = "ToolStripButton1"
         '
         'mnuFileNew
         '
@@ -332,12 +357,6 @@ Partial Class frmMain
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
-        '
-        'mnuFileClose
-        '
-        Me.mnuFileClose.Name = "mnuFileClose"
-        Me.mnuFileClose.Size = New System.Drawing.Size(152, 22)
-        Me.mnuFileClose.Text = "&Close"
         '
         'frmMain
         '
@@ -403,4 +422,6 @@ Partial Class frmMain
     Friend WithEvents mnuBrushColourWhite As ToolStripMenuItem
     Friend WithEvents mnuBrushColourYellow As ToolStripMenuItem
     Friend WithEvents mnuFileClose As ToolStripMenuItem
+    Friend WithEvents mnuWindowNewCarList As ToolStripMenuItem
+    Friend WithEvents btnToolStripNewCarList As ToolStripButton
 End Class

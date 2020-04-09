@@ -72,6 +72,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.vb" />
+    <Compile Include="CarInfoForm.designer.vb">
+      <DependentUpon>CarInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +115,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CarInfoForm.resx">
+      <DependentUpon>CarInfoForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -137,9 +147,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TacTacToe.jpg" />
-    <Content Include="Whiteboard.jpg" />
+    <Content Include="Images\CarInfo.ico" />
+    <Content Include="Images\CarInfo.png" />
+    <Content Include="Images\TacTacToe.ico" />
+    <Content Include="Images\TacTacToe.jpg" />
+    <Content Include="Images\Whiteboard.ico" />
+    <Content Include="Images\Whiteboard.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
