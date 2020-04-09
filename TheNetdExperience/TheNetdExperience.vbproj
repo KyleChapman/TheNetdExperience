@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Awesomeness.designer.vb">
+      <DependentUpon>Awesomeness.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Awesomeness.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Car.vb" />
     <Compile Include="CarInfoForm.designer.vb">
       <DependentUpon>CarInfoForm.vb</DependentUpon>
@@ -115,6 +121,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Awesomeness.resx">
+      <DependentUpon>Awesomeness.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarInfoForm.resx">
       <DependentUpon>CarInfoForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -149,10 +158,18 @@
   <ItemGroup>
     <Content Include="Images\CarInfo.ico" />
     <Content Include="Images\CarInfo.png" />
+    <Content Include="Images\Copy.ico" />
+    <Content Include="Images\Save.ico" />
+    <Content Include="Images\Cascade.ico" />
+    <Content Include="Images\TileHorizontal.ico" />
+    <Content Include="Images\TileVertical.ico" />
+    <Content Include="Images\Paste.ico" />
+    <Content Include="Images\Close.ico" />
     <Content Include="Images\TacTacToe.ico" />
     <Content Include="Images\TacTacToe.jpg" />
     <Content Include="Images\Whiteboard.ico" />
     <Content Include="Images\Whiteboard.jpg" />
+    <Content Include="Images\You.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
