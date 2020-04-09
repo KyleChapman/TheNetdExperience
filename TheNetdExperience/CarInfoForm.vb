@@ -16,9 +16,9 @@ Public Class frmCarInfo
     Dim isAddingToListView As Boolean = False   ' indicates whether the program is populating the ListView
     Dim carList As New List(Of Car)             ' the list of Car objects
 
-    Private Shared carListInstance As frmCarInfo
+    Private Shared carListInstance As frmCarInfo    ' an instance of this form
 
-    Const DefaultYear As Integer = 2000
+    Const DefaultYear As Integer = 2000         ' store the default year for less hardcoding
 
 #End Region
 #Region "Event Handlers"
@@ -129,7 +129,7 @@ Public Class frmCarInfo
         chkNew.Checked = True
         lblResult.Text = String.Empty
 
-        RefreshList()
+        RefreshList()   ' Re-populate the list
 
         isCarSelected = False
 
@@ -233,11 +233,18 @@ Public Class frmCarInfo
 
 #Region "Form Properties"
 
+    ''' <summary>
+    ''' Returns an instance of the Car List form using singleton design pattern; only one form can exist
+    ''' </summary>
+    ''' <returns>An instance of the Car List form</returns>
     Friend Shared ReadOnly Property Instance() As frmCarInfo
         Get
+            ' If there is no form already created
             If carListInstance Is Nothing Then
+                ' Create a new instance of the form
                 carListInstance = New frmCarInfo
             End If
+            ' Return the singular instance of the form
             Return carListInstance
         End Get
     End Property

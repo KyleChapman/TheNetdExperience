@@ -1,5 +1,6 @@
 ﻿' Author: Kyle Chapman
-' Date: March 31, 2020
+' Created: March 31, 2020
+' Modified: April 9, 2020
 ' Description:
 '   This program is a simple whiteboard or paint application.
 '   A user can draw freely on a surface using singular points
@@ -129,7 +130,7 @@ Public Class frmWhiteboard
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Saves the current opened file, or saves via a dialog if there is no current file
     ''' </summary>
     Friend Sub FileSave()
 
@@ -183,7 +184,7 @@ Public Class frmWhiteboard
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Attempts to paste in an image or text from the clipboard.
     ''' </summary>
     Friend Sub EditPaste()
 

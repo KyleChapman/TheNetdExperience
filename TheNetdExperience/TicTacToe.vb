@@ -1,8 +1,6 @@
-﻿' Last Modified By:   
-' Last Modified Date: February 11, 2020
-'
-' Author: Kyle Chapman
-' Date: February 9, 2020
+﻿' Author: Kyle Chapman
+' Created: February 9, 2020
+' Modified: April 9, 2020
 ' Description:
 '   It's a tic-tac-toe game! Is that supposed to be hypenated?
 '   There are 9 buttons in a 2D array. When clicked, they are assigned
@@ -203,35 +201,6 @@ Public Class frmTicTacToe
             squares(1, 1).BackColor = Color.MistyRose
             squares(2, 0).BackColor = Color.MistyRose
         End If
-
-        ' *************************************************
-        ' Here are some notes about extra stuff you can try
-        ' *************************************************
-
-        ' You don't have to do any of these things but here are several added value features:
-
-        ' 1) If you want to get a little bit fancy...
-        ' Make the winning line show up in a different colour!
-
-        ' 2) If you want to get even fancier...
-        ' Make this generate a message when the game is a draw/tie game! (cat game?)
-
-        ' 3) If you want to get *super* fancy...
-        ' How might you code this so it would work for boards of an arbitrary and bigger (e.g. 4x4) size?
-
-        ' 4) If you like efficiency...
-        ' How could you do everything in this Sub Procedure (other than colors) with a single loop?
-
-        ' 5) Another fanciness option for people who love clean code...
-        ' This file currently doesn't have Option Strict On, and turning it on will cause some issues.
-        ' Can you determine how to turn Option Strict On and still have it work?
-
-        ' 6) Holy crap you must want to make your life difficult for yourself if you pick this option:
-        ' Can you make it so that you can use arrow keys to move between the different squares in a natural way?
-
-        ' *********************************************
-        ' This is the part where you stop coding stuff!
-        ' *********************************************
 
         ' If there's a winner, show who it is!
         If isWinner Then
